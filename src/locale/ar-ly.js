@@ -2,7 +2,7 @@
 //! locale : Arabic (Lybia) [ar-ly]
 //! author : Ali Hmer: https://github.com/kikoanis
 
-import moment from '../moment';
+import moment from '../moment-core';
 
 var symbolMap = {
     '1': '1',
@@ -98,7 +98,7 @@ export default moment.defineLocale('ar-ly', {
         yy : pluralize('y')
     },
     preparse: function (string) {
-        return string.replace(/\u200f/g, '').replace(/،/g, ',');
+        return string.replace(/،/g, ',');
     },
     postformat: function (string) {
         return string.replace(/\d/g, function (match) {

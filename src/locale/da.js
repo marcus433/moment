@@ -2,7 +2,7 @@
 //! locale : Danish [da]
 //! author : Ulrik Nielsen : https://github.com/mrbase
 
-import moment from '../moment';
+import moment from '../moment-core';
 
 export default moment.defineLocale('da', {
     months : 'januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december'.split('_'),
@@ -13,7 +13,7 @@ export default moment.defineLocale('da', {
     longDateFormat : {
         LT : 'HH:mm',
         LTS : 'HH:mm:ss',
-        L : 'DD/MM/YYYY',
+        L : 'DD.MM.YYYY',
         LL : 'D. MMMM YYYY',
         LLL : 'D. MMMM YYYY HH:mm',
         LLLL : 'dddd [d.] D. MMMM YYYY [kl.] HH:mm'

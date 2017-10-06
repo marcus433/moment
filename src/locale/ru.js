@@ -4,7 +4,7 @@
 //! Author : Menelion Elensúle : https://github.com/Oire
 //! author : Коренберг Марк : https://github.com/socketpair
 
-import moment from '../moment';
+import moment from '../moment-core';
 
 function plural(word, num) {
     var forms = word.split('_');
@@ -168,6 +168,6 @@ export default moment.defineLocale('ru', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
