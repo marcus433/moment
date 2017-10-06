@@ -6,8 +6,8 @@
 
 ;(function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
+       && typeof require === 'function' ? factory(require('moment')) :
+   typeof define === 'function' && define.amd ? define(['moment'], factory) :
    factory(global.moment)
 }(this, (function (moment) { 'use strict';
 
@@ -122,7 +122,7 @@ var ar = moment.defineLocale('ar', {
         yy : pluralize('y')
     },
     preparse: function (string) {
-        return string.replace(/\u200f/g, '').replace(/[١٢٣٤٥٦٧٨٩٠]/g, function (match) {
+        return string.replace(/[١٢٣٤٥٦٧٨٩٠]/g, function (match) {
             return numberMap[match];
         }).replace(/،/g, ',');
     },
